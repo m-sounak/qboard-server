@@ -11,6 +11,8 @@ io.on('connection', (socket) => {
 })
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 5000;
+
+app.get("/",(req,res)=>{res.send("hi");})
 http.listen(server_port, () => {
     console.log("Started on :"+server_port);
 })
